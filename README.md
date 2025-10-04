@@ -6,6 +6,12 @@ You can add, edit, delete, and drag tasks between lists.
 
 ---
 
+## 🚀 Live Demo
+
+You can see the project running here:
+[mini-kanban-boards](https://mini-kanban-boards.vercel.app/)
+
+---
 ## 🚀 Features
 
 - Add new tasks to any board/list  
