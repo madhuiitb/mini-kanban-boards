@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.lists{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+@media (max-width: 768px){
+  .lists{
+    flex-wrap: wrap;
+  }
+ 
+}

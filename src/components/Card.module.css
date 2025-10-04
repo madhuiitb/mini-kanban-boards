@@ -1,0 +1,59 @@
+.card{
+    border: 1px solid #969595;
+    border-radius: 8px;
+    margin: 12px;
+    box-shadow: 0px 2px 4px 0px rgb(159, 159, 162); 
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 12px;
+    border-bottom: 1px solid #dbdbdb;
+    height: 32px;
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+
+}
+
+.card:hover{
+    background-color: #dfdfe0;
+}
+
+.btn{
+    background: transparent;
+    padding: 0px 6px;
+    border: none;
+    color: rgb(180, 181, 181);
+}
+
+.btn:hover{
+    transform: scale(1.4);
+    border: none;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+.chips{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: space-around;
+    font-size: 12px;
+}
+.chip{
+    background-color: #f1f0f0;
+    border-radius: 16px;
+    padding: 2px 6px;
+    font-size: 12px;
+}

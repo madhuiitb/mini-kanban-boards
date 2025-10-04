@@ -1,0 +1,43 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 2px solid #cecccc;
+   border-radius: 8px;
+   width: 424px;
+   margin-bottom: 8px;
+   background-color: rgb(228, 228, 230);
+   color: rgb(8, 8, 8);
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fields{
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-around;
+}
+.buttons{
+    padding: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.btn{
+    font-weight: 600;
+    font-size: 12px;
+    border: 2px solid  rgb(235, 237, 236);
+    box-shadow: 1px 1px 1px 0px rgb(201, 201, 241);
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
