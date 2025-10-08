@@ -16,9 +16,34 @@
     padding: 0px 8px;
 }
 
-.addBtn{
+.buttons{
+    margin-top: 18px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    gap: 4px;
+}
+.addBtn, .filterBtn, .sortBtn{
     background: none;
     border: none;
+    cursor: pointer;
+    height: none;
+    padding: 4px;
+}
+
+.addBtn:hover,.filterBtn:hover, .sortBtn:hover{
+    border: none;
+    transform: scale(1.8);
+}
+.sortBtn:active{
+    background: none;
+    border: none;
+    color: blue;
+}
+.sortingMenu{
+    position: absolute;
+    
 }
 .cards{
     height: 100%;

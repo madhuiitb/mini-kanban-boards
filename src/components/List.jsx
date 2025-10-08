@@ -1,6 +1,10 @@
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaFilter } from "react-icons/fa";
+import { BiSortAlt2, BiFilterAlt } from "react-icons/bi";
 import Card from "./Card";
 import styles from "./List.module.scss";
+import Sort from "./Sort";
+import { useState } from "react";
+
 const List = ({
   id,
   name,
@@ -10,6 +14,12 @@ const List = ({
   handleTaskDelete,
   handleTaskEdit,
 }) => {
+
+  const [expandSort, setExpandSort] = useState(false);
+  const [titleSort, setTitleSort] = useState(true);
+    const [descSort, setDescSort] = useState(true);
+    const [createdSort, setCreatedSort] = useState(true);
+
   const handleCardDragStart = (event, taskId) => {
     event.dataTransfer.setData("taskId", taskId);
     event.dataTransfer.setData("sourceId", id);
@@ -31,6 +41,8 @@ const List = ({
     event.preventDefault();
   };
 
+
+
   return (
     <div
       className={styles.list}
@@ -40,11 +52,32 @@ const List = ({
     >
       <div className={styles.header}>
         <h3>{name}</h3>
-        <button
-          title="Add task"
-          className={styles.addBtn} onClick={addTask}>
+        <div className={styles.buttons}>
+          <button title="Add task" className={styles.addBtn} onClick={addTask}>
             <FaPlus />
-        </button>
+          </button>
+          <button className={styles.filterBtn}>
+            <BiFilterAlt />
+          </button>
+          <button
+            className={styles.sortBtn}
+            onClick={() => setExpandSort(!expandSort)}
+          >
+            <BiSortAlt2 />
+          </button>
+        </div>
+        {expandSort && (
+          <div className={styles.sortingMenu}>
+            <Sort
+              titleSort={titleSort}
+              setTitleSort={setTitleSort}
+              descSort={descSort}
+              setDescSort={setDescSort}
+              createdSort={createdSort}
+              setCreatedSort={setCreatedSort}
+            />
+          </div>
+        )}
       </div>
       <div className={styles.cards}>
         {tasks.map((task) => (
@@ -54,6 +87,7 @@ const List = ({
             taskId={task.id}
             title={task.title}
             description={task.description}
+            created={task.createdAt}
             onDragStart={handleCardDragStart}
             handleTaskDelete={handleTaskDelete}
             handleTaskEdit={handleTaskEdit}

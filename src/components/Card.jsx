@@ -10,6 +10,7 @@ const Card = ({
   taskId,
   title,
   description,
+  created,
   onDragStart,
   handleTaskDelete,
   handleTaskEdit,
@@ -59,6 +60,7 @@ const Card = ({
       </div>
       <div className={styles.description}>
         <p>{description}</p>
+        <span className={styles.created}>{created}</span>
         <div className={styles.chips}>
           {randomChips.map((chip) => (
             <span className={styles.chip}>{chip}</span>

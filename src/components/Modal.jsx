@@ -16,7 +16,7 @@ const Modal = ({
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handleSumitData();
+          handleSumitData(e);
         }}
         className={styles.form}
       >

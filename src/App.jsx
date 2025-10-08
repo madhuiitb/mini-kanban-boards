@@ -40,7 +40,13 @@ function App() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   }
-  const handleSumitData = () => {
+  const handleSumitData = (e) => {
+    console.log("handle submit data", e.target);
+    const data = new FormData(e.target);
+    const entries = Object.fromEntries(data);
+   
+    const newTask = { ...entries, createdAt: new Date().toLocaleString()}
+     console.log("submit-> ", entries, newTask);
     handleCloseModal();
     const newLists = boards.map((list) => {
       if (list.id === listId) {

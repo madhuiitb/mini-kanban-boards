@@ -16,6 +16,12 @@
 }
 
 
+.created{
+    font-size: 12px;
+    color: #cecccc;
+    margin-bottom: 6px;
+}
+
 .buttons{
     display: flex;
     flex-direction: row;
